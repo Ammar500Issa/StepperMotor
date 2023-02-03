@@ -1,0 +1,219 @@
+
+**** 03/17/22 17:50:13 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "workshop-SCHEMATIC1-Workshop.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 0.1ms SKIPBP 
+.OPTIONS DIGINITSTATE= 1
+.OPTIONS DIGIOLVL= 2
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\workshop-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING workshop-SCHEMATIC1.net ****
+* source WORKSHOP
+V_Vss         VSS 0 5Vdc
+X_UucA         N00659 N00983 VOP -VPS N00983 TL074/301/TI
+R_RPI2-1         N48675 N49515  15k  
+R_R-12th         N02016 N01825  100k  
+C_CPI2-1         N49515 N48635  1u  
+R_Ruc2         N00659 VCC  1k  
+V_Vcc         VCC 0 17Vdc
+R_R-12         N02016 VCC  1k  
+C_CPI2-2         0 N48950  1u  
+R_Ruc1         0 N00659  1.5k  
+X_Uvf1A         N12797 0 VOP -VPS VFPULSE TL074/301/TI
+C_Cvf         N09559 N10611  50n  
+V_Vs         VS 0 25Vdc
+X_Ucmp1         N48595 0 VOP -VOP N52007 0 LM311
+X_UrefB1A         VCLK1 N17443 VOP -VPS N17443 TL074/301/TI
+D_Dvf         N10972 VFPULSE D1N4148 
+X_Uvf2A         0 N09559 VOP -VPS N10611 TL074/301/TI
+X_UPI1A         N48791 N48733 VOP -VOP N48595 TL074/301/TI
+X_UrefB2A         VCLK2 N16415 VOP -VPS N16415 TL074/301/TI
+X_Rref1A         VSS N16464 N17443 VSS VIREFA N16464 $G_DPWR $G_DGND 7474
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_RPI1-1         N48733 N48568  15k  
+X_Ucmp2         N48635 0 VOP -VOP N51953 0 LM311
+V_VIref2         VIREF2 0  
++PULSE -2.5V 2.5V 2.375m 0 0 1.816m 3.632m
+C_C-12control         0 N02575  1n  
+X_U12         VCC VOP 0 LM7812C
+R_RPI1-2         0 N48733  10k  
+X_UPI2A         N48884 N48675 VOP -VOP N48635 TL074/301/TI
+R_Rvf1         N00983 N09559  15k  
+C_C-12out1         N02776 N02983  2u  
+R_RPI1-4         VIREF1 N48791  10k  
+X_Uref2A         VSS N16523 N16415 VSS VIREFB N16523 $G_DPWR $G_DGND 7474
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U-12         0 N01825 N02776 VCC N02575 N01825 N02016 VCC 555B
+X_UvfBufferA         VFPULSE N14588 VOP -VPS N14588 TL074/301/TI
+R_Rvf3         N12797 VFPULSE  10k  
+V_VIref1         VIREF1 0  
++PULSE -2.5V 2.5V 1.467m 0 0 1.816m 3.632m
+C_C-12out2         0 -VPS  2u  
+R_RPI1-3         N48857 N48791  15k  
+D_D-12out1         N02983 0 D1N4148 
+R_Rvf4         N10972 N09559  2.2k  
+C_C-12th         0 N01825  1n  
+R_RPI2-3         N48950 N48884  15k  
+V_-Vop         -VOP 0 -12Vdc
+D_D-12out2         -VPS N02983 D1N4148 
+R_Rvf2         N10611 N12797  5k  
+X_UclkA         VSS VCLK2 N14588 VSS VCLK1 VCLK2 $G_DPWR $G_DGND 7474 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_RPI2-4         VIREF2 N48884  10k  
+C_CPI1-1         N48568 N48595  1u  
+R_RPI2-2         0 N48675  10k  
+R_R-12out         0 -VPS  5k  
+C_CPI1-2         0 N48857  1u  
+
+**** RESUMING workshop-SCHEMATIC1-Workshop.sim.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node VSS
+*
+* Moving X_UclkA.UFF1:CLRBAR from analog node VSS to new digital node VSS$AtoD
+X$VSS_AtoD1
++ VSS
++ VSS$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_UclkA.UFF1:PREBAR from analog node VSS to new digital node VSS$AtoD2
+X$VSS_AtoD2
++ VSS
++ VSS$AtoD2
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_Uref2A.UFF1:CLRBAR from analog node VSS to new digital node VSS$AtoD3
+X$VSS_AtoD3
++ VSS
++ VSS$AtoD3
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_Uref2A.UFF1:PREBAR from analog node VSS to new digital node VSS$AtoD4
+X$VSS_AtoD4
++ VSS
++ VSS$AtoD4
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_Rref1A.UFF1:CLRBAR from analog node VSS to new digital node VSS$AtoD5
+X$VSS_AtoD5
++ VSS
++ VSS$AtoD5
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_Rref1A.UFF1:PREBAR from analog node VSS to new digital node VSS$AtoD6
+X$VSS_AtoD6
++ VSS
++ VSS$AtoD6
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N17443
+*
+* Moving X_Rref1A.UFF1:CLK from analog node N17443 to new digital node N17443$AtoD
+X$N17443_AtoD1
++ N17443
++ N17443$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node VCLK1
+*
+* Moving X_UclkA.UFF1:Q1 from analog node VCLK1 to new digital node VCLK1$DtoA
+X$VCLK1_DtoA1
++ VCLK1$DtoA
++ VCLK1
++ $G_DPWR
++ $G_DGND
++ DtoA_STD
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N16415
+*
+* Moving X_Uref2A.UFF1:CLK from analog node N16415 to new digital node N16415$AtoD
+X$N16415_AtoD1
++ N16415
++ N16415$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node VCLK2
+*
+* Moving X_UclkA.UFF1:D1 from analog node VCLK2 to new digital node VCLK2$AtoD
+X$VCLK2_AtoD1
++ VCLK2
++ VCLK2$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_UclkA.UFF1:QBAR1 from analog node VCLK2 to new digital node VCLK2$DtoA
+X$VCLK2_DtoA1
++ VCLK2$DtoA
++ VCLK2
++ $G_DPWR
++ $G_DGND
++ DtoA_STD
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N14588
+*
+* Moving X_UclkA.UFF1:CLK from analog node N14588 to new digital node N14588$AtoD
+X$N14588_AtoD1
++ N14588
++ N14588$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+
+X$DIGIFPWR 0 DIGIFPWR
+
+ERROR -- Less than 2 connections at node N52007
+ERROR -- Less than 2 connections at node N51953

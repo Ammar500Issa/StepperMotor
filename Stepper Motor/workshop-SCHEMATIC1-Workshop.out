@@ -1,0 +1,1131 @@
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "workshop-SCHEMATIC1-Workshop.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 0.1ms SKIPBP 
+.OPTIONS DIGINITSTATE= 1
+.OPTIONS DIGIOLVL= 2
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\workshop-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING workshop-SCHEMATIC1.net ****
+* source WORKSHOP
+V_Vss         VSS 0 5Vdc
+R_Rvd1-3         0 N70977  1k  
+X_UucA         N00659 N00983 VOP -VPS N00983 TL074/301/TI
+R_Rvd2-4         0 N71031  1k  
+Q_Qc2-1         N60508 N59640 0 QBC337/PLP 
+R_RPI2-1         N48675 N49515  15k  
+R_Rc1-1         N52007 N59563  10k  
+R_R-12th         N02016 N01825  100k  
+R_Rsense1         MES1-1 MES1-2  0.22  
+C_CPI2-1         N49515 N48635  1u  
+R_Ruc2         N00659 VCC  1k  
+C_Cc2-1         N51953 N59640  10n  
+R_Rcmp1         N52007 VSS  1k  
+V_Vcc         VCC 0 17Vdc
+R_Rvd1-4         0 N70950  1k  
+R_Rmes2-3         N71871 N78770  1k  
+Q_Qc2-2         N64022 N68050 0 QBC337/PLP 
+R_Rc1-3         N60481 VS  1k  
+R_R-12         N02016 VCC  1k  
+X_UmesB1-1A         N70977 N73862 VOP -VOP N73862 TL074/301/TI
+R_Rsense2         MES2-1 MES2-2  0.22  
+C_CPI2-2         0 N48950  1u  
+R_Ruc1         0 N00659  1.5k  
+C_Cc2-2         N68050 N68135  10n  
+R_Rcmp2         N51953 VSS  1k  
+X_Uvf1A         N12797 0 VOP -VPS VFPULSE TL074/301/TI
+C_Cvf         N09559 N10611  50n  
+R_Rgend         N54925 N54956  12k  
+V_Vs         VS 0 25Vdc
+R_Rmes1-1         N73862 N78598  1k  
+R_Rmes2-4         0 N78770  100k  
+L_Lmotor1         N65674 MES1-1  3.44m  
+X_Ucmp1         N48595 N56321 VOP -VOP N52007 0 LM311
+R_Rmotor1         N62892 N65674  3  
+X_D1-1         N62892 VS D120NQ045 
+X_UrefB1A         VCLK1 N17443 VOP -VPS N17443 TL074/301/TI
+D_Dvf         N10972 VFPULSE D1N4148 
+X_Umes1A         N78632 N78598 VOP -VOP VIMES1 TL074/301/TI
+R_Rgenc         N54987 N54925  10k  
+R_Rmes1-2         N78598 VIMES1  100k  
+L_Lmotor2         N65774 MES2-1  3.48m  
+X_Uvf2A         0 N09559 VOP -VPS N10611 TL074/301/TI
+R_Rc1-4         N63986 VS  1k  
+X_D1-3         0 N62892 D120NQ045 
+X_Ugen1A         N54987 0 VOP -VOP N54925 TL074/301/TI
+R_Rgenf         N54987 N55027  4k  
+X_UPI1A         N48791 N48733 VOP -VOP N48595 TL074/301/TI
+R_Rmes1-3         N73909 N78632  1k  
+X_UrefB2A         VCLK2 N16415 VOP -VPS N16415 TL074/301/TI
+X_Rref1A         VSS N16464 N17443 VSS VIREFA N16464 $G_DPWR $G_DGND 7474
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_RPI1-1         N48733 N48568  15k  
+X_Q1-1         VS N60481 N62892 TIP102
+R_Rc1-2         N67992 N68108  10k  
+X_Ucmp2         N48635 N56321 VOP -VOP N51953 0 LM311
+V_VIref2         VIREF2 0  
++PULSE -2.5V 2.5V 2.375m 0 0 1.816m 3.632m
+X_UmesB1-2A         N70950 N73909 VOP -VOP N73909 TL074/301/TI
+X_D1-4         0 MES1-2 D120NQ045 
+C_Cgen         N54956 N55027  10n  
+X_Ugen2A         0 N54956 VOP -VOP N55027 TL074/301/TI
+X_U12         VCC VOP 0 LM7812C
+R_Rmes1-4         0 N78632  100k  
+C_Chpf         N55027 N56321  1u  
+C_C-12control         0 N02575  1n  
+R_RPI1-2         VIREF1 N48733  10k  
+R_Rc2-1         N51953 N59640  10k  
+X_D1-2         MES1-2 VS D120NQ045 
+X_Q1-2         VS N63986 MES1-2 TIP102
+X_UPI2A         N48884 N48675 VOP -VOP N48635 TL074/301/TI
+R_Rvf1         N00983 N09559  15k  
+X_Not1         N52007 N68108  $G_DPWR $G_DGND INV
+X_UmesB2-2A         N71031 N71871 VOP -VOP N71871 TL074/301/TI
+R_Rvd2-1         N71004 MES2-2  10k  
+R_Rhpf         0 N56321  100k  
+C_C-12out1         N02776 N02983  2u  
+R_RPI1-4         VIMES1 N48791  10k  
+X_Uref2A         VSS N16523 N16415 VSS VIREFB N16523 $G_DPWR $G_DGND 7474
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_Rc2-3         N60508 VS  1k  
+X_D2-3         0 N63004 D120NQ045 
+X_U-12         0 N01825 N02776 VCC N02575 N01825 N02016 VCC 555B
+X_Q1-3         0 N60481 N62892 TIP107
+X_UvfBufferA         VFPULSE N14588 VOP -VPS N14588 TL074/301/TI
+X_Q2-1         VS N60508 N63004 TIP102
+R_Rvf3         N12797 VFPULSE  10k  
+R_Rvd2-2         N71031 MES2-1  10k  
+V_VIref1         VIREF1 0  
++PULSE -2.5V 2.5V 1.467m 0 0 1.816m 3.632m
+C_C-12out2         0 -VPS  2u  
+R_RPI1-3         N48857 N48791  15k  
+D_D-12out1         N02983 0 D1N4148 
+X_Not2         N51953 N68135  $G_DPWR $G_DGND INV
+R_Rmotor2         N63004 N65774  3  
+X_D2-1         N63004 VS D120NQ045 
+X_UmesB2-1A         N71004 N71824 VOP -VOP N71824 TL074/301/TI
+X_Q1-4         0 N63986 MES1-2 TIP107
+X_Q2-2         VS N64022 MES2-2 TIP102
+R_Rvf4         N10972 N09559  2.2k  
+R_Rmes2-1         N71824 N78701  1k  
+C_C-12th         0 N01825  1n  
+R_RPI2-3         N48950 N48884  15k  
+V_-Vop         -VOP 0 -12Vdc
+D_D-12out2         -VPS N02983 D1N4148 
+R_Rc2-4         N64022 VS  1k  
+X_D2-2         MES2-2 VS D120NQ045 
+Q_Qc1-1         N60481 N59563 0 QBC337/PLP 
+R_Rvf2         N10611 N12797  5k  
+X_Q2-4         0 N64022 MES2-2 TIP107
+R_Rvd1-1         N70977 MES1-2  10k  
+R_Rmes2-2         N78701 VIMES2  100k  
+X_UclkA         VSS VCLK2 N14588 VSS VCLK1 VCLK2 $G_DPWR $G_DGND 7474 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Umes2A         N78770 N78701 VOP -VOP VIMES2 TL074/301/TI
+R_RPI2-4         VIMES2 N48884  10k  
+R_Rc2-2         N68050 N68135  10k  
+C_CPI1-1         N48568 N48595  1u  
+X_D2-4         0 MES2-2 D120NQ045 
+C_Cc1-1         N52007 N59563  10n  
+Q_Qc1-2         N63986 N67992 0 QBC337/PLP 
+R_Rvd1-2         N70950 MES1-1  10k  
+R_Rvd2-3         0 N71004  1k  
+X_Q2-3         0 N60508 N63004 TIP107
+R_RPI2-2         VIREF2 N48675  10k  
+R_R-12out         0 -VPS  5k  
+C_CPI1-2         0 N48857  1u  
+C_Cc1-2         N67992 N68108  10n  
+
+**** RESUMING workshop-SCHEMATIC1-Workshop.sim.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node VSS
+*
+* Moving X_UclkA.UFF1:CLRBAR from analog node VSS to new digital node VSS$AtoD
+X$VSS_AtoD1
++ VSS
++ VSS$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_UclkA.UFF1:PREBAR from analog node VSS to new digital node VSS$AtoD2
+X$VSS_AtoD2
++ VSS
++ VSS$AtoD2
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_Uref2A.UFF1:CLRBAR from analog node VSS to new digital node VSS$AtoD3
+X$VSS_AtoD3
++ VSS
++ VSS$AtoD3
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_Uref2A.UFF1:PREBAR from analog node VSS to new digital node VSS$AtoD4
+X$VSS_AtoD4
++ VSS
++ VSS$AtoD4
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_Rref1A.UFF1:CLRBAR from analog node VSS to new digital node VSS$AtoD5
+X$VSS_AtoD5
++ VSS
++ VSS$AtoD5
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_Rref1A.UFF1:PREBAR from analog node VSS to new digital node VSS$AtoD6
+X$VSS_AtoD6
++ VSS
++ VSS$AtoD6
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N52007
+*
+* Moving X_Not1.U1:IN1 from analog node N52007 to new digital node N52007$AtoD
+X$N52007_AtoD1
++ N52007
++ N52007$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoDdefault
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N51953
+*
+* Moving X_Not2.U1:IN1 from analog node N51953 to new digital node N51953$AtoD
+X$N51953_AtoD1
++ N51953
++ N51953$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoDdefault
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N68135
+*
+* Moving X_Not2.U1:OUT1 from analog node N68135 to new digital node N68135$DtoA
+X$N68135_DtoA1
++ N68135$DtoA
++ N68135
++ $G_DPWR
++ $G_DGND
++ DtoAdefault
++       PARAMS: DRVH=  50     DRVL=  50     CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N68108
+*
+* Moving X_Not1.U1:OUT1 from analog node N68108 to new digital node N68108$DtoA
+X$N68108_DtoA1
++ N68108$DtoA
++ N68108
++ $G_DPWR
++ $G_DGND
++ DtoAdefault
++       PARAMS: DRVH=  50     DRVL=  50     CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N17443
+*
+* Moving X_Rref1A.UFF1:CLK from analog node N17443 to new digital node N17443$AtoD
+X$N17443_AtoD1
++ N17443
++ N17443$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node VCLK1
+*
+* Moving X_UclkA.UFF1:Q1 from analog node VCLK1 to new digital node VCLK1$DtoA
+X$VCLK1_DtoA1
++ VCLK1$DtoA
++ VCLK1
++ $G_DPWR
++ $G_DGND
++ DtoA_STD
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N16415
+*
+* Moving X_Uref2A.UFF1:CLK from analog node N16415 to new digital node N16415$AtoD
+X$N16415_AtoD1
++ N16415
++ N16415$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node VCLK2
+*
+* Moving X_UclkA.UFF1:D1 from analog node VCLK2 to new digital node VCLK2$AtoD
+X$VCLK2_AtoD1
++ VCLK2
++ VCLK2$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_UclkA.UFF1:QBAR1 from analog node VCLK2 to new digital node VCLK2$DtoA
+X$VCLK2_DtoA1
++ VCLK2$DtoA
++ VCLK2
++ $G_DPWR
++ $G_DGND
++ DtoA_STD
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N14588
+*
+* Moving X_UclkA.UFF1:CLK from analog node N14588 to new digital node N14588$AtoD
+X$N14588_AtoD1
++ N14588
++ N14588$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+
+X$DIGIFPWR 0 DIGIFPWR
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         X_UucA.DX       X_UmesB1-1A.DX  X_Uvf1A.DX      
+          IS    2.682000E-09  800.000000E-18  800.000000E-18  800.000000E-18 
+           N    1.836                                                        
+         ISR    1.565000E-09                                                 
+         IKF     .04417                                                      
+          BV  100                                                            
+         IBV  100.000000E-06                                                 
+          RS     .5664                                                       
+          TT   11.540000E-09                                                 
+         CJO    4.000000E-12                                                 
+          VJ     .5                                                          
+           M     .3333                                                       
+
+
+               X_Ucmp1.dx      X_D1-1.DFWD     X_D1-1.DLEAK    X_UrefB1A.DX    
+          IS  800.000000E-18   11.137170E-06  186.070200E-12  800.000000E-18 
+           N                     .520057       99.2231                       
+         ISR                  225.763900E-12                                 
+         IKF                  184.112000E-06                                 
+          BV                   44.905         100.000000E+03                 
+         IBV                    2.586700E-03    1.000000E-03                 
+          RS                    1.020740E-03     .1                          
+         CJO                   11.509000E-09                                 
+          VJ                     .75                                         
+           M                     .49488                                      
+          EG                     .69             .69                         
+         XTI                    2               2                            
+
+
+               X_Umes1A.DX     X_Uvf2A.DX      X_D1-3.DFWD     X_D1-3.DLEAK    
+          IS  800.000000E-18  800.000000E-18   11.137170E-06  186.070200E-12 
+           N                                     .520057       99.2231       
+         ISR                                  225.763900E-12                 
+         IKF                                  184.112000E-06                 
+          BV                                   44.905         100.000000E+03 
+         IBV                                    2.586700E-03    1.000000E-03 
+          RS                                    1.020740E-03     .1          
+         CJO                                   11.509000E-09                 
+          VJ                                     .75                         
+           M                                     .49488                      
+          EG                                     .69             .69         
+         XTI                                    2               2            
+
+
+               X_Ugen1A.DX     X_UPI1A.DX      X_UrefB2A.DX    X_Q1-1.Dmodel   
+          IS  800.000000E-18  800.000000E-18  800.000000E-18    3.472100E-12 
+           N                                                    3.4748       
+         ISR                                                  100.000000E-12 
+          BV                                                  120            
+         IBV                                                    1.000000E-06 
+          RS                                                    1.000000E-03 
+          TT                                                    5.000000E-09 
+         CJO                                                    1.000000E-12 
+          VJ                                                     .75         
+           M                                                     .3333       
+
+
+               X_Ucmp2.dx      X_UmesB1-2A.DX  X_D1-4.DFWD     X_D1-4.DLEAK    
+          IS  800.000000E-18  800.000000E-18   11.137170E-06  186.070200E-12 
+           N                                     .520057       99.2231       
+         ISR                                  225.763900E-12                 
+         IKF                                  184.112000E-06                 
+          BV                                   44.905         100.000000E+03 
+         IBV                                    2.586700E-03    1.000000E-03 
+          RS                                    1.020740E-03     .1          
+         CJO                                   11.509000E-09                 
+          VJ                                     .75                         
+           M                                     .49488                      
+          EG                                     .69             .69         
+         XTI                                    2               2            
+
+
+               X_Ugen2A.DX     X_D1-2.DFWD     X_D1-2.DLEAK    X_Q1-2.Dmodel   
+          IS  800.000000E-18   11.137170E-06  186.070200E-12    3.472100E-12 
+           N                     .520057       99.2231          3.4748       
+         ISR                  225.763900E-12                  100.000000E-12 
+         IKF                  184.112000E-06                                 
+          BV                   44.905         100.000000E+03  120            
+         IBV                    2.586700E-03    1.000000E-03    1.000000E-06 
+          RS                    1.020740E-03     .1             1.000000E-03 
+          TT                                                    5.000000E-09 
+         CJO                   11.509000E-09                    1.000000E-12 
+          VJ                     .75                             .75         
+           M                     .49488                          .3333       
+          EG                     .69             .69                         
+         XTI                    2               2                            
+
+
+               X_UPI2A.DX      X_UmesB2-2A.DX  X_D2-3.DFWD     X_D2-3.DLEAK    
+          IS  800.000000E-18  800.000000E-18   11.137170E-06  186.070200E-12 
+           N                                     .520057       99.2231       
+         ISR                                  225.763900E-12                 
+         IKF                                  184.112000E-06                 
+          BV                                   44.905         100.000000E+03 
+         IBV                                    2.586700E-03    1.000000E-03 
+          RS                                    1.020740E-03     .1          
+         CJO                                   11.509000E-09                 
+          VJ                                     .75                         
+           M                                     .49488                      
+          EG                                     .69             .69         
+         XTI                                    2               2            
+
+
+               X_Q1-3.Dmodel   X_UvfBufferA.DX X_Q2-1.Dmodel   X_D2-1.DFWD     
+          IS    3.472100E-12  800.000000E-18    3.472100E-12   11.137170E-06 
+           N    3.4748                          3.4748           .520057     
+         ISR  100.000000E-12                  100.000000E-12  225.763900E-12 
+         IKF                                                  184.112000E-06 
+          BV  120                             120              44.905        
+         IBV    1.000000E-06                    1.000000E-06    2.586700E-03 
+          RS    1.000000E-03                    1.000000E-03    1.020740E-03 
+          TT    5.000000E-09                    5.000000E-09                 
+         CJO    1.000000E-12                    1.000000E-12   11.509000E-09 
+          VJ     .75                             .75             .75         
+           M     .3333                           .3333           .49488      
+          EG                                                     .69         
+         XTI                                                    2            
+
+
+               X_D2-1.DLEAK    X_UmesB2-1A.DX  X_Q1-4.Dmodel   X_Q2-2.Dmodel   
+          IS  186.070200E-12  800.000000E-18    3.472100E-12    3.472100E-12 
+           N   99.2231                          3.4748          3.4748       
+         ISR                                  100.000000E-12  100.000000E-12 
+          BV  100.000000E+03                  120             120            
+         IBV    1.000000E-03                    1.000000E-06    1.000000E-06 
+          RS     .1                             1.000000E-03    1.000000E-03 
+          TT                                    5.000000E-09    5.000000E-09 
+         CJO                                    1.000000E-12    1.000000E-12 
+          VJ                                     .75             .75         
+           M                                     .3333           .3333       
+          EG     .69                                                         
+         XTI    2                                                            
+
+
+               X_D2-2.DFWD     X_D2-2.DLEAK    X_Q2-4.Dmodel   X_Umes2A.DX     
+          IS   11.137170E-06  186.070200E-12    3.472100E-12  800.000000E-18 
+           N     .520057       99.2231          3.4748                       
+         ISR  225.763900E-12                  100.000000E-12                 
+         IKF  184.112000E-06                                                 
+          BV   44.905         100.000000E+03  120                            
+         IBV    2.586700E-03    1.000000E-03    1.000000E-06                 
+          RS    1.020740E-03     .1             1.000000E-03                 
+          TT                                    5.000000E-09                 
+         CJO   11.509000E-09                    1.000000E-12                 
+          VJ     .75                             .75                         
+           M     .49488                          .3333                       
+          EG     .69             .69                                         
+         XTI    2               2                                            
+
+
+               X_D2-4.DFWD     X_D2-4.DLEAK    X_Q2-3.Dmodel   X_U12.x1.Dlim   
+          IS   11.137170E-06  186.070200E-12    3.472100E-12   10.000000E-15 
+           N     .520057       99.2231          3.4748                       
+         ISR  225.763900E-12                  100.000000E-12                 
+         IKF  184.112000E-06                                                 
+          BV   44.905         100.000000E+03  120                            
+         IBV    2.586700E-03    1.000000E-03    1.000000E-06                 
+          RS    1.020740E-03     .1             1.000000E-03                 
+          TT                                    5.000000E-09                 
+         CJO   11.509000E-09                    1.000000E-12                 
+          VJ     .75                             .75             .7          
+           M     .49488                          .3333                       
+          EG     .69             .69                                         
+         XTI    2               2                                            
+
+
+               X_U12.x1.Dz     D74CLMP         D74             
+          IS   50.000000E-15    1.000000E-15  100.000000E-18 
+          BV    7.11                                         
+         IBV   50.000000E-09                                 
+          RS    3               2              25            
+         CJO                    2.000000E-12    2.000000E-12 
+
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC337/PLP      X_Ucmp1.qin     X_Ucmp1.qmi     X_Ucmp1.qmo     
+               NPN             PNP             NPN             NPN             
+          IS   41.300000E-15  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  292.4           500               1.002000E+03    1.000000E+03 
+          NF     .9822          1               1               1            
+         VAF  145.7                                                          
+         IKF     .9                                                          
+         ISE    3.534000E-15                                                 
+          NE    1.35                                                         
+          BR   23.68            1               1               1            
+          NR     .982           1               1               1            
+         VAR   20                                                            
+         IKR     .1                                                          
+         ISC  195.700000E-15                                                 
+          NC    1.3                                                          
+          RB   60                                                            
+         RBM    8                                                            
+         IRB  200.000000E-06                                                 
+          RE     .1129                                                       
+          RC     .25                                                         
+         CJE   37.990000E-12                                                 
+         VJE     .6752                                                       
+         MJE     .3488                                                       
+         CJC   13.550000E-12                                    1.000000E-15 
+         VJC     .3523                                                       
+         MJC     .3831                                                       
+        XCJC     .455                                                        
+         MJS     .333                                                        
+          FC     .643                                                        
+          TF  540.000000E-12                                                 
+         XTF    4                                                            
+         VTF    4.448                                                        
+         ITF     .665                                                        
+         PTF   90                                                            
+          TR   30.000000E-09                                  124.200000E-09 
+          CN    2.42            2.2             2.42            2.42         
+           D     .87             .52             .87             .87         
+
+
+               X_Ucmp1.qoc     X_Q1-1.Q1model  X_Q1-1.Q2model  X_Ucmp2.qin     
+               NPN             NPN             NPN             PNP             
+          IS  800.000000E-18  209.200000E-15  209.200000E-15  800.000000E-18 
+          BF  206.900000E+03    2.997000E+03    2.997000E+03  500            
+          NF    1               1               1               1            
+         VAF                  100             100                            
+         IKF                     .07177          .07177                      
+         ISE                    4.744000E-12    4.744000E-12                 
+          NE                    1.447           1.447                        
+          BR    1              36.63           36.63            1            
+          NR    1               1               1               1            
+         VAR                  100             100                            
+         IKR                     .4299           .4299                       
+         ISC                    1.630000E-12    1.630000E-12                 
+          NC                    1.002           1.002                        
+          NK                     .5871           .5871                       
+          RB                   27.3662         27.3662                       
+          RC                    3.26784         3.26784                      
+         CJE                  111.800000E-12  111.800000E-12                 
+         VJE                     .5941           .5941                       
+         MJE                     .4082           .4082                       
+         CJC    1.000000E-15  160.100000E-12                                 
+         VJC                     .5399           .5399                       
+         MJC                     .1963           .1963                       
+        XCJC                     .9              .9                          
+          TF    7.855000E-12   18.000000E-09   18.000000E-09                 
+         XTF                    1               1                            
+         VTF                   10              10                            
+         ITF                     .01             .01                         
+          TR   83.830000E-09   13.000000E-06   13.000000E-06                 
+          CN    2.42            2.42            2.42            2.2          
+           D     .87             .87             .87             .52         
+
+
+               X_Ucmp2.qmi     X_Ucmp2.qmo     X_Ucmp2.qoc     X_Q1-2.Q1model  
+               NPN             NPN             NPN             NPN             
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  209.200000E-15 
+          BF    1.002000E+03    1.000000E+03  206.900000E+03    2.997000E+03 
+          NF    1               1               1               1            
+         VAF                                                  100            
+         IKF                                                     .07177      
+         ISE                                                    4.744000E-12 
+          NE                                                    1.447        
+          BR    1               1               1              36.63         
+          NR    1               1               1               1            
+         VAR                                                  100            
+         IKR                                                     .4299       
+         ISC                                                    1.630000E-12 
+          NC                                                    1.002        
+          NK                                                     .5871       
+          RB                                                   27.3662       
+          RC                                                    3.26784      
+         CJE                                                  111.800000E-12 
+         VJE                                                     .5941       
+         MJE                                                     .4082       
+         CJC                    1.000000E-15    1.000000E-15  160.100000E-12 
+         VJC                                                     .5399       
+         MJC                                                     .1963       
+        XCJC                                                     .9          
+          TF                                    7.855000E-12   18.000000E-09 
+         XTF                                                    1            
+         VTF                                                   10            
+         ITF                                                     .01         
+          TR                  124.200000E-09   83.830000E-09   13.000000E-06 
+          CN    2.42            2.42            2.42            2.42         
+           D     .87             .87             .87             .87         
+
+
+               X_Q1-2.Q2model  X_U-12.qnpn555  X_U-12.qpnp555  X_Q1-3.Q1model  
+               NPN             NPN             PNP             PNP             
+          IS  209.200000E-15   14.340000E-15  650.600000E-18  980.000000E-18 
+          BF    2.997000E+03   65.62           70.35            2.997000E+03 
+          NF    1               1               1               1            
+         VAF  100              74.03          115.7           100            
+         IKF     .07177          .02             .02             .06427      
+         ISE    4.744000E-12   19.480000E-15  180.500000E-15  216.100000E-15 
+          NE    1.447           1.208           1.829           1.502        
+          BR   36.63            9.715           4.146            .1001       
+          NR    1               1               1               1            
+         VAR  100                                             100            
+         IKR     .4299                                           .01001      
+         ISC    1.630000E-12                                  988.900000E-15 
+          NC    1.002                                           2.997        
+          NK     .5871                                           .6613       
+          RB   27.3662         10              10              19.6609       
+          RC    3.26784         1                .715           3.83074      
+         CJE  111.800000E-12   40.000000E-12   40.000000E-12  145.400000E-12 
+         VJE     .5941                                          1.5          
+         MJE     .4082           .377            .3357           .4942       
+         CJC                   40.000000E-12   40.000000E-12  239.700000E-12 
+         VJC     .5399                                          1.498        
+         MJC     .1963           .3416           .5383           .252        
+        XCJC     .9                                              .9          
+          TF   18.000000E-09    1.000000E-09    1.000000E-09    8.000000E-09 
+         XTF    1               3               1.7             1            
+         VTF   10               1.7             5              10            
+         ITF     .01             .6              .65             .01         
+          TR   13.000000E-06   58.980000E-09  119.900000E-09   18.000000E-06 
+         XTB                    1.5             1.5                          
+          CN    2.42            2.42            2.2             2.2          
+           D     .87             .87             .52             .52         
+
+
+               X_Q1-3.Q2model  X_Q2-1.Q1model  X_Q2-1.Q2model  X_Q1-4.Q1model  
+               PNP             NPN             NPN             PNP             
+          IS  980.000000E-18  209.200000E-15  209.200000E-15  980.000000E-18 
+          BF    2.997000E+03    2.997000E+03    2.997000E+03    2.997000E+03 
+          NF    1               1               1               1            
+         VAF  100             100             100             100            
+         IKF     .06427          .07177          .07177          .06427      
+         ISE  216.100000E-15    4.744000E-12    4.744000E-12  216.100000E-15 
+          NE    1.502           1.447           1.447           1.502        
+          BR     .1001         36.63           36.63             .1001       
+          NR    1               1               1               1            
+         VAR  100             100             100             100            
+         IKR     .01001          .4299           .4299           .01001      
+         ISC  988.900000E-15    1.630000E-12    1.630000E-12  988.900000E-15 
+          NC    2.997           1.002           1.002           2.997        
+          NK     .6613           .5871           .5871           .6613       
+          RB   19.6609         27.3662         27.3662         19.6609       
+          RC    3.83074         3.26784         3.26784         3.83074      
+         CJE  145.400000E-12  111.800000E-12  111.800000E-12  145.400000E-12 
+         VJE    1.5              .5941           .5941          1.5          
+         MJE     .4942           .4082           .4082           .4942       
+         CJC                  160.100000E-12                  239.700000E-12 
+         VJC    1.498            .5399           .5399          1.498        
+         MJC     .252            .1963           .1963           .252        
+        XCJC     .9              .9              .9              .9          
+          TF    8.000000E-09   18.000000E-09   18.000000E-09    8.000000E-09 
+         XTF    1               1               1               1            
+         VTF   10              10              10              10            
+         ITF     .01             .01             .01             .01         
+          TR   18.000000E-06   13.000000E-06   13.000000E-06   18.000000E-06 
+          CN    2.2             2.42            2.42            2.2          
+           D     .52             .87             .87             .52         
+
+
+               X_Q1-4.Q2model  X_Q2-2.Q1model  X_Q2-2.Q2model  X_Q2-4.Q1model  
+               PNP             NPN             NPN             PNP             
+          IS  980.000000E-18  209.200000E-15  209.200000E-15  980.000000E-18 
+          BF    2.997000E+03    2.997000E+03    2.997000E+03    2.997000E+03 
+          NF    1               1               1               1            
+         VAF  100             100             100             100            
+         IKF     .06427          .07177          .07177          .06427      
+         ISE  216.100000E-15    4.744000E-12    4.744000E-12  216.100000E-15 
+          NE    1.502           1.447           1.447           1.502        
+          BR     .1001         36.63           36.63             .1001       
+          NR    1               1               1               1            
+         VAR  100             100             100             100            
+         IKR     .01001          .4299           .4299           .01001      
+         ISC  988.900000E-15    1.630000E-12    1.630000E-12  988.900000E-15 
+          NC    2.997           1.002           1.002           2.997        
+          NK     .6613           .5871           .5871           .6613       
+          RB   19.6609         27.3662         27.3662         19.6609       
+          RC    3.83074         3.26784         3.26784         3.83074      
+         CJE  145.400000E-12  111.800000E-12  111.800000E-12  145.400000E-12 
+         VJE    1.5              .5941           .5941          1.5          
+         MJE     .4942           .4082           .4082           .4942       
+         CJC                  160.100000E-12                  239.700000E-12 
+         VJC    1.498            .5399           .5399          1.498        
+         MJC     .252            .1963           .1963           .252        
+        XCJC     .9              .9              .9              .9          
+          TF    8.000000E-09   18.000000E-09   18.000000E-09    8.000000E-09 
+         XTF    1               1               1               1            
+         VTF   10              10              10              10            
+         ITF     .01             .01             .01             .01         
+          TR   18.000000E-06   13.000000E-06   13.000000E-06   18.000000E-06 
+          CN    2.2             2.42            2.42            2.2          
+           D     .52             .87             .87             .52         
+
+
+               X_Q2-4.Q2model  X_Q2-3.Q1model  X_Q2-3.Q2model  X_U12.x1.Npn1   
+               PNP             PNP             PNP             NPN             
+          IS  980.000000E-18  980.000000E-18  980.000000E-18   10.000000E-15 
+          BF    2.997000E+03    2.997000E+03    2.997000E+03   50            
+          NF    1               1               1               1            
+         VAF  100             100             100                            
+         IKF     .06427          .06427          .06427                      
+         ISE  216.100000E-15  216.100000E-15  216.100000E-15                 
+          NE    1.502           1.502           1.502                        
+          BR     .1001           .1001           .1001          1            
+          NR    1               1               1               1            
+         VAR  100             100             100                            
+         IKR     .01001          .01001          .01001                      
+         ISC  988.900000E-15  988.900000E-15  988.900000E-15                 
+          NC    2.997           2.997           2.997                        
+          NK     .6613           .6613           .6613                       
+          RB   19.6609         19.6609         19.6609                       
+          RC    3.83074         3.83074         3.83074                      
+         CJE  145.400000E-12  145.400000E-12  145.400000E-12                 
+         VJE    1.5             1.5             1.5                          
+         MJE     .4942           .4942           .4942                       
+         CJC                  239.700000E-12                                 
+         VJC    1.498           1.498           1.498                        
+         MJC     .252            .252            .252                        
+        XCJC     .9              .9              .9                          
+          TF    8.000000E-09    8.000000E-09    8.000000E-09                 
+         XTF    1               1               1                            
+         VTF   10              10              10                            
+         ITF     .01             .01             .01                         
+          TR   18.000000E-06   18.000000E-06   18.000000E-06                 
+          CN    2.2             2.2             2.2             2.42         
+           D     .52             .52             .52             .87         
+
+
+               Q74             
+               NPN             
+          IS  100.000000E-18 
+          BF   49            
+          NF    1            
+         ISE  100.000000E-18 
+          BR     .03         
+          NR    1            
+         ISC  400.000000E-18 
+          RB   50            
+          RC   20            
+         CJE    1.000000E-12 
+         VJE     .9          
+         MJE     .5          
+         CJC  500.000000E-15 
+         VJC     .8          
+         CJS    3.000000E-12 
+         VJS     .7          
+         MJS     .33         
+          TF  200.000000E-12 
+          TR   10.000000E-09 
+          CN    2.42         
+           D     .87         
+
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_UucA.JX       X_UmesB1-1A.JX  X_Uvf1A.JX      X_UrefB1A.JX    
+               PJF             PJF             PJF             PJF             
+         VTO   -1              -1              -1              -1            
+        BETA  270.100000E-06  270.100000E-06  270.100000E-06  270.100000E-06 
+          IS   15.000000E-12   15.000000E-12   15.000000E-12   15.000000E-12 
+
+
+               X_Umes1A.JX     X_Uvf2A.JX      X_Ugen1A.JX     X_UPI1A.JX      
+               PJF             PJF             PJF             PJF             
+         VTO   -1              -1              -1              -1            
+        BETA  270.100000E-06  270.100000E-06  270.100000E-06  270.100000E-06 
+          IS   15.000000E-12   15.000000E-12   15.000000E-12   15.000000E-12 
+
+
+               X_UrefB2A.JX    X_UmesB1-2A.JX  X_Ugen2A.JX     X_UPI2A.JX      
+               PJF             PJF             PJF             PJF             
+         VTO   -1              -1              -1              -1            
+        BETA  270.100000E-06  270.100000E-06  270.100000E-06  270.100000E-06 
+          IS   15.000000E-12   15.000000E-12   15.000000E-12   15.000000E-12 
+
+
+               X_UmesB2-2A.JX  X_UvfBufferA.JX X_UmesB2-1A.JX  X_Umes2A.JX     
+               PJF             PJF             PJF             PJF             
+         VTO   -1              -1              -1              -1            
+        BETA  270.100000E-06  270.100000E-06  270.100000E-06  270.100000E-06 
+          IS   15.000000E-12   15.000000E-12   15.000000E-12   15.000000E-12 
+
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U12.x1.Sbg1   
+         RON    1            
+        ROFF    1.000000E+06 
+         VON    3.7          
+        VOFF    3            
+
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     Digital Input MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DIN74           
+        FILE DSO_DTOA        
+      FORMAT    6            
+    TIMESTEP  100.000000E-12 
+      S0NAME 0               
+       S0TSW    3.500000E-09 
+       S0RLO    7.13         
+       S0RHI  389            
+      S1NAME 1               
+       S1TSW    5.500000E-09 
+       S1RLO  467            
+       S1RHI  200            
+      S2NAME X               
+       S2TSW    3.500000E-09 
+       S2RLO   42.9          
+       S2RHI  116            
+      S3NAME R               
+       S3TSW    3.500000E-09 
+       S3RLO   42.9          
+       S3RHI  116            
+      S4NAME F               
+       S4TSW    3.500000E-09 
+       S4RLO   42.9          
+       S4RHI  116            
+      S5NAME Z               
+       S5TSW    3.500000E-09 
+       S5RLO  200.000000E+03 
+       S5RHI  200.000000E+03 
+
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     Digital Output MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DO74_NX         DO74            
+        FILE DSO_ATOD        DSO_ATOD        
+      FORMAT    6               6            
+     CHGONLY    1               1            
+    TIMESTEP  100.000000E-12  100.000000E-12 
+      S0NAME 0               X               
+       S0VHI    1.35            2            
+       S0VLO   -1.5              .8          
+      S1NAME                 0               
+       S1VHI                     .8          
+       S1VLO                   -1.5          
+      S2NAME 1               R               
+       S2VHI    7               1.4          
+       S2VLO    1.35             .8          
+      S3NAME                 R               
+       S3VHI                    2            
+       S3VLO                    1.3          
+      S4NAME                 X               
+       S4VHI                    2            
+       S4VLO                     .8          
+      S5NAME                 1               
+       S5VHI                    7            
+       S5VLO                    2            
+      S6NAME                 F               
+       S6VHI                    2            
+       S6VLO                    1.3          
+      S7NAME                 F               
+       S7VHI                    1.4          
+       S7VLO                     .8          
+
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_PLD_GATE      
+      TPLHMN    0            
+      TPLHTY    0            
+      TPLHMX    0            
+      TPHLMN    0            
+      TPHLTY    0            
+      TPHLMX    0            
+
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     Digital Edge Triggered FF MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_74            
+  TPCLKQLHMN    5.600000E-09 
+  TPCLKQLHTY   14.000000E-09 
+  TPCLKQLHMX   25.000000E-09 
+  TPCLKQHLMN    8.000000E-09 
+  TPCLKQHLTY   20.000000E-09 
+  TPCLKQHLMX   40.000000E-09 
+   TPPCQLHMN    6.250000E-09 
+   TPPCQLHTY   15.625000E-09 
+   TPPCQLHMX   25.000000E-09 
+   TPPCQHLMN   10.000000E-09 
+   TPPCQHLTY   25.000000E-09 
+   TPPCQHLMX   40.000000E-09 
+    TWCLKLMN   37.000000E-09 
+    TWCLKLTY   37.000000E-09 
+    TWCLKLMX   37.000000E-09 
+    TWCLKHMN   30.000000E-09 
+    TWCLKHTY   30.000000E-09 
+    TWCLKHMX   30.000000E-09 
+     TWPCLMN   30.000000E-09 
+     TWPCLTY   30.000000E-09 
+     TWPCLMX   30.000000E-09 
+   TSUDCLKMN   20.000000E-09 
+   TSUDCLKTY   20.000000E-09 
+   TSUDCLKMX   20.000000E-09 
+ TSUPCCLKHMN    0            
+ TSUPCCLKHTY    0            
+ TSUPCCLKHMX    0            
+    THDCLKMN    5.000000E-09 
+    THDCLKTY    5.000000E-09 
+    THDCLKMX    5.000000E-09 
+  TSUCECLKMN    0            
+  TSUCECLKTY    0            
+  TSUCECLKMX    0            
+   THCECLKMN    0            
+   THCECLKTY    0            
+   THCECLKMX    0            
+
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STD          IO_PLD          IO_DFT          
+        DRVL  104                                            
+        DRVH   96.4                                          
+       AtoD1 AtoD_STD                        AtoD_STD        
+       AtoD2 AtoD_STD_NX                     AtoD_STD_NX     
+       AtoD3 AtoD_STD                        AtoD_STD        
+       AtoD4 AtoD_STD_NX                     AtoD_STD_NX     
+       DtoA1 DtoA_STD                        DtoA_STD        
+       DtoA2 DtoA_STD                        DtoA_STD        
+       DtoA3 DtoA_STD                        DtoA_STD        
+       DtoA4 DtoA_STD                        DtoA_STD        
+      TSWHL1    1.511000E-09                                 
+      TSWHL2    1.487000E-09                                 
+      TSWHL3    1.511000E-09                                 
+      TSWHL4    1.487000E-09                                 
+      TSWLH1    3.517000E-09                                 
+      TSWLH2    3.564000E-09                                 
+      TSWLH3    3.517000E-09                                 
+      TSWLH4    3.564000E-09                                 
+       TPWRT  100.000000E+03  100.000000E+03  100.000000E+03 
+
+
+**** 03/17/22 19:25:07 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Workshop"  [ C:\USERS\AMMAR ISSA\DESKTOP\Workshop\workshop-SCHEMATIC1-Workshop.sim ] 
+
+
+ ****     SIMULATION ERRORS
+
+
+******************************************************************************
+
+
+
+
+DIGITAL Message ID#1 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 100ps
+  Device: X$N52007_AtoD1.O1
+  Voltage V(N52007,$G_DGND)= 7.4944 is beyond the ranges defined in model DO74
+
+
+DIGITAL Message ID#2 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 100ps
+  Device: X$N51953_AtoD1.O1
+  Voltage V(N51953,$G_DGND)= 7.4944 is beyond the ranges defined in model DO74
+
+
+DIGITAL Message ID#3 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 1.3472us
+  Device: X$N14588_AtoD1.O0
+  Voltage V(N14588,$G_DGND)= 7.0004 is beyond the ranges defined in model DO74_NX
+
+
+DIGITAL Message ID#4 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 27.3718us
+  Device: X$N17443_AtoD1.O0
+  Voltage V(N17443,$G_DGND)= 7.0003 is beyond the ranges defined in model DO74_NX
+
+
+DIGITAL Message ID#5 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 131.652us
+  Device: X$N14588_AtoD1.O0
+  Voltage V(N14588,$G_DGND)= 7.0005 is beyond the ranges defined in model DO74_NX
+
+
+DIGITAL Message ID#6 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 1.4676543ms
+  Device: X$N14588_AtoD1.O0
+  Voltage V(N14588,$G_DGND)= 7.0008 is beyond the ranges defined in model DO74_NX
+
+
+DIGITAL Message ID#7 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 2.3746422ms
+  Device: X$N14588_AtoD1.O0
+  Voltage V(N14588,$G_DGND)= 7.0006 is beyond the ranges defined in model DO74_NX
+
+
+DIGITAL Message ID#8 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 3.3035845ms
+  Device: X$N14588_AtoD1.O0
+  Voltage V(N14588,$G_DGND)= 7.0012 is beyond the ranges defined in model DO74_NX
+
+
+DIGITAL Message ID#9 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 4.2371962ms
+  Device: X$N14588_AtoD1.O0
+  Voltage V(N14588,$G_DGND)= 7.0011 is beyond the ranges defined in model DO74_NX
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME          245.89
+
